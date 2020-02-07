@@ -2,33 +2,19 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Welcome from './welcome'
-import TierContainer from './tier-container'
+import Game from './game'
+import Missions from './missions'
 
 class GameContainer extends Component {    
-    state = {
-        selectedIndex: "welcome"
-      };
-    
-      handleSelect = index => {
-        this.setState({ selectedIndex: index });
-      };
-    
-      handleButtonClick = () => {
-        this.setState({ selectedIndex: "game" });
-      };
-
+  
   render() {
     return (
-      <Tabs activeKey={this.state.selectedIndex} onSelect={this.handleSelect} defaultActiveKey='welcome'>
-        <Tab eventKey="welcome">
-        <Welcome onClick={this.handleButtonClick}></Welcome>
-      </Tab>
-      <Tab eventKey="game" title="RBG">   
-      <TierContainer></TierContainer>
+      <Tabs defaultActiveKey='game'>
+      <Tab eventKey="game" title="Star Idle">   
+      <Game></Game>
       </Tab>      
-        <Tab eventKey="settings" title="settings">
-            <div>More to come here</div>
+        <Tab eventKey="missions" title="Missions">
+            <Missions></Missions>
         </Tab>        
       </Tabs>
     );

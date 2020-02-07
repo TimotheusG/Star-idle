@@ -1,17 +1,14 @@
 import React from 'react';
 import Display from './display'
 
-const Score = ({ to_next_pixel, pixels, colors_length}) => {
+const Score = ({ engine_speed, distance}) => {
   return(
     <div class="row">
         <div class="col">
-          <Display text="To Next Pixel" value={to_next_pixel}></Display>
-          </div>
-          <div class="col">
-          <Display text="Pixels" value={pixels}></Display>
+          <Display text="Engine" value={engine_speed}></Display>
           </div>
           <div class="col"> 
-          <Display text="Colors" value={colors_length}></Display>
+          <Display text="Distance" value={distance}></Display>
           </div>
           </div>
   )

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import tierReducer from './tierReducer';
+import gameReducer from './gameReducer';
 export default combineReducers({
- tierReducer
+ gameReducer
 });
